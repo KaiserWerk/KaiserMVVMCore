@@ -16,19 +16,35 @@ Example:
 ```csharp
 public class ViewModelLocator
 {
-  public ViewModelLocator
-  {
-    IocContainer.Register<MainViewModel>();
-    IocContainer.Register<LoginViewModel>();
-    IocContainer.Register<SettingsViewModel>();
-  }
+    public ViewModelLocator
+    {
+        IocContainer.Register<MainViewModel>();
+        IocContainer.Register<LoginViewModel>();
+        IocContainer.Register<SettingsViewModel>();
+    }
 
-  // use Properties, since these are bindable in XAML
-  public MainViewModel MainViewModalInstance => IocContainer.GetInstance<MainViewModel>();
-  public LoginViewModel LoginViewModalInstance => IocContainer.GetInstance<LoginViewModel>();
-  public SettingsViewModel SettingsViewModalInstance => IocContainer.GetInstance<SettingsViewModel>();
+    // use Properties, since these are bindable in XAML
+    public MainViewModel MainViewModelInstance => IocContainer.GetInstance<MainViewModel>();
+    public LoginViewModel LoginViewModelInstance => IocContainer.GetInstance<LoginViewModel>();
+    public SettingsViewModel SettingsViewModelInstance => IocContainer.GetInstance<SettingsViewModel>();
 }
 ```
+
+#### ViewModelBase class
+
+The ViewModelBase class is available to be inherited from. It offer an easy-to-use ``Set<T>`` method to set bound properties at runtime with no need
+to call ``PropertyChanged(nameof(MyProperty))``.
+
+Example:
+
+```csharp
+public class MainViewModel : ViewModelBase
+{
+    ....
+}
+```
+
+
 
 ### Honorable Mentions
 
