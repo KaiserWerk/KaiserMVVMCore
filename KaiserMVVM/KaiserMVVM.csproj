@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Version>1.0.0</Version>
+    <Authors>Robin Kaiser</Authors>
+    <Company>KaiserWerk</Company>
+    <Description>An easy-to-use MVVM implementation for .NET Core. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
+    <PackageIcon>scheme.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVM</RepositoryUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModelBase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\scheme.png" />
+    <None Include="Resources/scheme.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\scheme.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ViewModelBase.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

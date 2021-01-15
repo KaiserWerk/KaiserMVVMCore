@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KaiserMVVM": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}
