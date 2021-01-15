@@ -11,7 +11,7 @@
     <PackageIcon>scheme.png</PackageIcon>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVM</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
@@ -21,6 +21,10 @@
 
   <ItemGroup>
     <None Remove="Resources\scheme.png" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="Resources/scheme.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
