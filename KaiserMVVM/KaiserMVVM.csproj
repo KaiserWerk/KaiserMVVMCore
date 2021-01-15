@@ -11,7 +11,8 @@
     <PackageIcon>scheme.png</PackageIcon>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVM</RepositoryUrl>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,6 +34,12 @@
     <Content Include="ViewModelBase.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Messenger.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>
