@@ -9,7 +9,7 @@
     <Company>KaiserWerk</Company>
     <Description>An easy-to-use MVVM implementation for .NET Core. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
     <PackageIcon>scheme.png</PackageIcon>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVM</RepositoryUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
