@@ -33,7 +33,7 @@ public class ViewModelLocator
 #### ViewModelBase class
 
 The ViewModelBase class is available to be inherited from. It offer an easy-to-use ``Set<T>`` method to set bound properties at runtime with no need
-to call ``PropertyChanged(nameof(MyProperty))``.
+to call ``OnPropertyChanged(nameof(MyProperty))``.
 
 Example:
 
