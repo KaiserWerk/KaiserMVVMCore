@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KaiserMVVM
+namespace KaiserMVVMCore
 {
     [Flags]
     public enum RegisterMode
@@ -16,7 +16,7 @@ namespace KaiserMVVM
         private static Dictionary<Type, (object, RegisterMode, object[])> instances = new Dictionary<Type, (object, RegisterMode, object[])>();
         private static object lockObj = new object();
 
-        public static void Register<T>(RegisterMode mode = RegisterMode.None, params object[] parameters) where T : class
+        public static void Register<T>(RegisterMode mode = RegisterMode.Singleton, params object[] parameters) where T : class
         {
             lock (lockObj)
             {

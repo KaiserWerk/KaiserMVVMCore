@@ -1,9 +1,10 @@
-﻿using KaiserMVVM.Annotations;
-using KaiserMVVM.Exceptions;
+﻿using KaiserMVVMCore.Exceptions;
+using KaiserMVVMCore.Properties.Annotations;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace KaiserMVVM
+
+namespace KaiserMVVMCore
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

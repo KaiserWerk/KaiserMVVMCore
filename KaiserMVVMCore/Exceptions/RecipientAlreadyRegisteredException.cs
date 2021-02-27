@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KaiserMVVM.Exceptions
+namespace KaiserMVVMCore.Exceptions
 {
     public class RecipientAlreadyRegisteredException : Exception
     {

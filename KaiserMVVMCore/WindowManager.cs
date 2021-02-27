@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KaiserMVVM
+namespace KaiserMVVMCore
 {
     public static class WindowManager
     {
@@ -30,6 +30,20 @@ namespace KaiserMVVM
                 windowDict.Remove(typeof(T));
                 win?.Close();
             }
+        }
+
+        public static IWindow GetInstance<T>() where T : IWindow
+        {
+            bool exists = windowDict.TryGetValue(typeof(T), out IWindow win);
+            if (exists)
+            {
+                return (T)win;
+            }
+
+            IWindow w = (T)Activator.CreateInstance(typeof(T));
+            windowDict[typeof(T)] = w;
+
+            return w;
         }
     }
 }

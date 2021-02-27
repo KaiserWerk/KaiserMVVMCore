@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace KaiserMVVM
+namespace KaiserMVVMCore
 {
     public class RelayCommand : ICommand
     {
