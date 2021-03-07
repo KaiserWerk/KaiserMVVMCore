@@ -15,8 +15,11 @@ namespace KaiserMVVMCore
         {
             lock (sendLock)
             {
-                var set = registrants.First(e => e.Key == typeof(T));
-                set.Value?.Invoke(obj);
+                var set = registrants.Where(e => e.Key == typeof(T));
+                foreach (var item in set)
+                {
+                    item.Value?.Invoke(obj);
+                }
             }
         }
 
