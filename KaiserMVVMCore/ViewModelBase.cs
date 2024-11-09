@@ -4,29 +4,28 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 
-namespace KaiserMVVMCore
+namespace KaiserMVVMCore;
+
+public abstract class ViewModelBase : INotifyPropertyChanged
 {
-    public abstract class ViewModelBase : INotifyPropertyChanged
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    [NotifyPropertyChangedInvocator]
+    protected virtual void OnPropertyChanged(string propertyName = null)
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged(string propertyName = null)
+    public void Set<T>(ref T myVar, T value, [CallerMemberName] string propertyName = null)
+    {
+        if (propertyName != null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            myVar = value;
+            OnPropertyChanged(propertyName);
         }
-
-        public void Set<T>(ref T myVar, T value, [CallerMemberName] string propertyName = null)
+        else
         {
-            if (propertyName != null)
-            {
-                myVar = value;
-                OnPropertyChanged(propertyName);
-            }
-            else
-            {
-                throw new PropertyNameUnknownException();
-            }
+            throw new PropertyNameUnknownException();
         }
     }
 }

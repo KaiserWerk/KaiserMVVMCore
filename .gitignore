@@ -1,5 +1,6 @@
 .vs/
 .idea/
 
-KaiserMVVMCore/bin/
-KaiserMVVMCore/obj/
+**/[Bb]in
+**/[Oo]bj
+KaiserMVVMCore.Test.Console

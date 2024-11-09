@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KaiserMVVMCore", "KaiserMVVMCore\KaiserMVVMCore.csproj", "{1C26B0DA-2A19-48A9-8DFC-215508B36428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiserMVVMCore.Test.Console", "KaiserMVVMCore.Test.Console\KaiserMVVMCore.Test.Console.csproj", "{5E8C81FF-D8B6-402D-AA69-7EA9596008D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaiserMVVMCore.Test", "KaiserMVVMCore.Test\KaiserMVVMCore.Test.csproj", "{B24B3861-F1C2-4AB4-A21C-B0A7B9E5504D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1C26B0DA-2A19-48A9-8DFC-215508B36428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C26B0DA-2A19-48A9-8DFC-215508B36428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C26B0DA-2A19-48A9-8DFC-215508B36428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E8C81FF-D8B6-402D-AA69-7EA9596008D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8C81FF-D8B6-402D-AA69-7EA9596008D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8C81FF-D8B6-402D-AA69-7EA9596008D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8C81FF-D8B6-402D-AA69-7EA9596008D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24B3861-F1C2-4AB4-A21C-B0A7B9E5504D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24B3861-F1C2-4AB4-A21C-B0A7B9E5504D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24B3861-F1C2-4AB4-A21C-B0A7B9E5504D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24B3861-F1C2-4AB4-A21C-B0A7B9E5504D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

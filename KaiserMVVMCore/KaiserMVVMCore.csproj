@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyVersion>1.2.3</AssemblyVersion>
-    <FileVersion>1.2.3</FileVersion>
-    <Version>1.2.3</Version>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
+    <Version>2.0.0</Version>
     <Authors>Robin Kaiser</Authors>
     <Company>KaiserWerk</Company>
-    <Description>An easy-to-use MVVM implementation for .NET Core. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
+    <Description>An easy-to-use MVVM implementation for .NET 6+. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
     <PackageIcon>scheme.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVMCore</RepositoryUrl>

@@ -6,6 +6,43 @@
 
 ### Usage
 
+#### Normal IoC Container with constructor parameter resolution
+
+Either create a new instance or use the `Default` one.
+
+Example:
+
+```csharp
+namespace MyApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Container.Default.Register<IOtherServiceInterface, OtherService>();
+            Container.Default.Register<IServiceInterface, Service>();
+
+            var service = Container.Default.GetInstance<IServiceInterface>();
+            var otherService = Container.Default.GetInstance<IOtherServiceInterface>();
+			
+			// use the services
+        }
+    }
+
+    public interface IServiceInterface { }
+    public class Service : IServiceInterface 
+    {
+        public Service(IOtherServiceInterface otherService)
+        { }
+    }
+
+    public interface IOtherServiceInterface { }
+    public class OtherService : IOtherServiceInterface { }
+
+
+}
+```
+
 #### Basic IoC Container for ViewModel Locators
 
 You cannot create instances of the KaiserMVVM.IocContainer class. Use the static methods instead. Use the ``Register<T>()`` method to register all your 
