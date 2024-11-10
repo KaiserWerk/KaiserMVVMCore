@@ -10,9 +10,6 @@ namespace KaiserMVVMCore.Test
             Container.Default.Register<ITestInterfaceB, TestClassB>();
             Container.Default.Register<ITestInterfaceA, TestClassA>();
 
-
-            
-
             ITestInterfaceB instanceB = Container.Default.GetInstance<ITestInterfaceB>();
             TestClassB? implB = instanceB as TestClassB;
             Assert.That(implB, Is.Not.Null);

@@ -1,5 +1,4 @@
 ﻿using KaiserMVVMCore.Exceptions;
-using KaiserMVVMCore.Properties.Annotations;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -10,7 +9,6 @@ public abstract class ViewModelBase : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    [NotifyPropertyChangedInvocator]
     protected virtual void OnPropertyChanged(string propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

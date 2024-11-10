@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace KaiserMVVMCore;
+﻿namespace KaiserMVVMCore;
 
 [Flags]
 public enum RegisterMode

@@ -2,37 +2,38 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0</FileVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>2.0.0</Version>
     <Authors>Robin Kaiser</Authors>
     <Company>KaiserWerk</Company>
     <Description>An easy-to-use MVVM implementation for .NET 6+. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
-    <PackageIcon>scheme.png</PackageIcon>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon></PackageIcon>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVMCore</RepositoryUrl>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageId>KaiserMVVMCore</PackageId>
-    <Product>KaiserMVVMCore</Product>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Resources\scheme.png" />
-    <None Include="..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="Resources/scheme.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Resources\scheme.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.md" Link="LICENSE.md">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\scheme.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
