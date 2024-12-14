@@ -31,7 +31,7 @@ public class Container
         }
     }
 
-    public void Register<TClass>(Action<TClass> factory) where TClass : class
+    public void Register<TClass>(Func<TClass> factory) where TClass : class
     {
         Type type = typeof(TClass);
         if (!this.registeredTypes.TryAdd(type, type))

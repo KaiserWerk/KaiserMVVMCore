@@ -11,8 +11,8 @@
     <Description>An easy-to-use MVVM implementation for .NET 8+. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
     <PackageIcon></PackageIcon>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVMCore</RepositoryUrl>
-    <AssemblyVersion>2.1.1</AssemblyVersion>
-    <FileVersion>2.1.1</FileVersion>
+    <AssemblyVersion>2.1.0</AssemblyVersion>
+    <FileVersion>2.1.0</FileVersion>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <SignAssembly>False</SignAssembly>
   </PropertyGroup>
