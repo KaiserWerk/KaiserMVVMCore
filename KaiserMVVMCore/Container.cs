@@ -7,6 +7,7 @@ public class Container
     public static Container Default { get; } = new Container();
 
     private Dictionary<Type, Type> registeredTypes = new Dictionary<Type, Type>();
+    private Dictionary<Type, Delegate> registeredFactories = new Dictionary<Type, Delegate>();
     private Dictionary<Type, object> instances = new Dictionary<Type, object>();
 
     public void Register<TInterface, TClass>()
@@ -27,6 +28,20 @@ public class Container
         if (!this.registeredTypes.TryAdd(type, type))
         {
             throw new InvalidOperationException($"Type {type.FullName} already registered");
+        }
+    }
+
+    public void Register<TClass>(Action<TClass> factory) where TClass : class
+    {
+        Type type = typeof(TClass);
+        if (!this.registeredTypes.TryAdd(type, type))
+        {
+            throw new InvalidOperationException($"Type {type.FullName} already registered");
+        }
+
+        if (!this.registeredFactories.TryAdd(type, factory))
+        {
+            throw new InvalidOperationException($"Factory for type {type.FullName} already registered");
         }
     }
 
@@ -79,7 +94,17 @@ public class Container
             throw new Exception($"Derived Type {type.FullName} not found");
         }
 
-        object newInstance = this.MakeInstance(derivedType);
+        object newInstance = null;
+
+        if (this.registeredFactories.TryGetValue(type, out Delegate del))
+        {
+            newInstance = del.DynamicInvoke(null);
+        }
+        else
+        {
+            newInstance = this.MakeInstance(derivedType);
+        }
+        
         this.instances.Add(type, newInstance);
         return newInstance;
     }

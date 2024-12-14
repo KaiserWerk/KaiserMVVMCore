@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace KaiserMVVMCore;
+﻿namespace KaiserMVVMCore;
 
 public static class WindowManager
 {
