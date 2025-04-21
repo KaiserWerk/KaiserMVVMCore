@@ -5,14 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.1</Version>
+    <Version>2.1.2</Version>
     <Authors>Robin Kaiser</Authors>
     <Company>KaiserWerk</Company>
     <Description>An easy-to-use MVVM implementation for .NET 8+. See the GitHub page (https://github.com/KaiserWerk/KaiserMVVM) for documentation.</Description>
     <PackageIcon></PackageIcon>
     <RepositoryUrl>https://github.com/KaiserWerk/KaiserMVVMCore</RepositoryUrl>
-    <AssemblyVersion>2.1.1</AssemblyVersion>
-    <FileVersion>2.1.1</FileVersion>
+    <AssemblyVersion>2.1.2</AssemblyVersion>
+    <FileVersion>2.1.2</FileVersion>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <SignAssembly>False</SignAssembly>
   </PropertyGroup>

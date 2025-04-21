@@ -22,7 +22,7 @@ public class RelayCommand : ICommand
 
     public bool CanExecute(object parameter)
     {
-        return (this.execute != null || this.executeAsync != null) && 
+        return (this.execute != null || this.executeAsync != null) &&
                (this.canExecute == null || this.canExecute?.Invoke(parameter) == true);
     }
 
@@ -35,16 +35,28 @@ public class RelayCommand : ICommand
     }
 
     public event EventHandler CanExecuteChanged;
+
+    public void RaiseCanExecuteChanged()
+    {
+        this.CanExecuteChanged?.Invoke(null, EventArgs.Empty);
+    }
 }
 
 public class RelayCommand<T> : ICommand
 {
     private Action<T> execute;
+    private Func<T, Task> executeAsync;
     private Func<object, bool> canExecute;
 
     public RelayCommand(Action<T> ex, Func<object, bool> canEx = null)
     {
         this.execute = ex;
+        this.canExecute = canEx;
+    }
+
+    public RelayCommand(Func<T, Task> ex, Func<object, bool> canEx = null)
+    {
+        this.executeAsync = ex;
         this.canExecute = canEx;
     }
 
@@ -55,8 +67,20 @@ public class RelayCommand<T> : ICommand
 
     public void Execute(object parameter)
     {
-        this.execute?.Invoke((T)parameter);
+        if (this.execute != null)
+        {
+            this.execute.Invoke((T)parameter);
+        }
+        else if (this.executeAsync != null)
+        {
+            this.executeAsync((T)parameter).GetAwaiter().GetResult();
+        }        
     }
 
     public event EventHandler CanExecuteChanged;
+
+    public void RaiseCanExecuteChanged()
+    {
+        this.CanExecuteChanged?.Invoke(null, EventArgs.Empty);
+    }
 }
